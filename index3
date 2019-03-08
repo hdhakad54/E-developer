@@ -1,0 +1,8 @@
+<?php 
+session_start();
+	$con = mysqli_connect("localhost","root","","demo");
+
+	$sql = "select * from registration where email='".$_SESSION['email']."'";
+	$r = mysqli_query($con,$sql);
+	$n =mysqli_fetch_array($r);
+?>
